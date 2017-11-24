@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://sdk.yunhetong.com/sdk/api/yht.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jquery-1.8.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="yht.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+ <table border="1" cellspacing="0" cellpadding="2">
+    <tr>
+        <td>appId:     </td> <td><input name="appId" value="2017052214544700003" ></td>
+        <td>appUserId: </td> <td><input name="appUserId" value="newTest"></td>
+        <td>cellNum:   </td> <td> <input name="cellNum"></td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>userType:  </td> <td> <select name="userType"><option>1</option> <option>2</option> <option>4</option></select></td><br>
+        <td>userName:      </td>    <td><input name="userName"></td>
+        <td>certifyType:   </td>     <td><select name="certifyType"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></td>
+         <td></td>
+     </tr>
+     <tr>
+        <td>certifyNumber:  </td>   <td> <input name="certifyNumber"></td>
+        <td>createSignature: </td>  <td> <select name="createSignature"> <option>0</option> <option>1</option> </select><br></td>
+         <td>password:    </td> <td> <input name="password" value="shengwuyou123" ></td>
+         <td><button id="addUser" onclick="addUser()">添加用户</button></td>
+     </tr>
+     <tr><td colspan="7">---获取token-----</td></tr>
+     <tr>
+         <td>appId:     </td> <td><input name="appIdToken" value="2017052214544700003" ></td>
+         <td>appUserId: </td> <td><input name="appUserIdToken" value="newTest"></td>
+         <td>password:    </td> <td> <input name="passwordToken" value="shengwuyou123" ></td>
+         <td><button id="getToken" onclick="getToken()">获取token</button></td>
+     </tr>
+</table><br>
+
+ token：<input name="token" style="width:600px;" disabled="true">
+ <button id="checkToken" onclick="checkToken()" >检验token</button><br>
+
+ 修改后的cellNum:   <input name="newCellNum">
+ <button id="modifyCellNum" onclick="modifyCellNum()">修改用户手机号</button><br>
+
+ 修改后的userName:   <input name="newUserName">
+ 修改后的createSignature:  <select name="newCreateSignature"> <option>0</option> <option>1</option> </select>
+ <button id="modifyUserName" onclick="modifyUserName()">修改用户名 </button><br>
+
+ <table border="1" cellspacing="0" cellpadding="2">
+     <tr>
+         <td rowspan="2">title:     </td> <td rowspan="2"><input name="title" value="测试合同-swy"></td>
+         <td rowspan="2">defContractNo: </td> <td rowspan="2"><input name="defContractNo" valaue="12345"></td>
+         <td >templateId:</td> <td> <input name="templateId" value="29734"></td>
+         <td rowspan="2">useCer:  </td> <td rowspan="2"> <select name="useCer"><option>0</option> <option>1</option> </select></td><br>
+     </tr>
+     <tr>
+         <td>文 件 上 传: </td> <td><input name="file" type="file"></td>
+     </tr>
+     <tr><td>param: </td> <td colspan="5"><input name="param" style="width:700px;"></td>
+         <td colspan="2"> <button id="templateContract" onclick="templateContract()">模板创建合同</button> <button id="fileContract" onclick="fileContract()">上传文件创建合同</button></td>
+     </tr>
+ </table><br>
+
+ <table border="1" cellspacing="0" cellpadding="2">
+     <tr>
+         <td rowspan="4">contractId : </td><td rowspan="4"> <input name="contractId" ></td>
+     </tr>
+    <tr>
+        <td>partners :  </td>
+        <td> <input name="partners" >  </td>
+        <td ><button id="addPartner" onclick="addPartner()">添加合同参与者</button></td>
+
+    </tr>
+     <tr>
+        <td> signer :   </td>
+        <td><input name="signer" > </td>
+        <td > <button id="autoSignContract" onclick="autoSignContract()">自动签署合同</button></td>
+    </tr>
+     <tr>
+         <td colspan="4"> <button id="signContract" onclick="signContract()">合同签署</button>
+             <button id="invalid" onclick="invalid()">合同作废</button>
+             <button id="contractDetail" onclick="contractDetail()">合同签署状态查询</button>
+             <button id="contractDownload" onclick="contractDownload()">合同下载</button></td>
+     </tr>
+ </table>
+ <br>
+pageNum :   <input name="pageNum" >
+pageSize :   <input name="pageSize" > <button id="contractList" onclick="contractList()">合同列表查询</button>
+
+ <br>-----------------------------------------------------------------------------------------------------------------------------------------------------<br>
+
+ <div>
+        运行结果：<br>
+        <textarea name="info" cols="200" rows="10"></textarea>
+
+ </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+body {  margin: 0 1%;  background-color: #f8f8f8;  font-family: "微软雅黑 Light";  }
+.main{ height:100% ; overflow:hidden; }
+
+.right_message{ position:absolute;top : 80px ;left:600px;right:0;bottom:50px;}
+
+/*头部*/
+.main_top{ position:absolute ; top:0 ; left:0 ; right:0 ; height:80px ;  background: linear-gradient(80deg , #838ab9 , #f5f5f5);}
+.req_name{     position: absolute;  left: 80px;  top: 15px;}
+.req_url{     position: absolute;  left: 230px;  top: 18px; border: 0px ; background : rgba(0,0,0,0);}
+.token_name{    position: absolute;  left: 80px;  top: 45px;}
+.token_info{    position: absolute;  left: 230px;  top: 45px;  width: 540px;  height: 20px;  border: 0px ; background : rgba(0,0,0,0);}
+.token_action_1{    position: absolute;  left: 780px;  top: 45px;   width: 60px;  border-radius: 15px;}
+.token_action_2{    position: absolute;  left: 850px;  top: 45px;   width: 60px;  border-radius: 15px;}
+
+/*菜单栏*/
+.left_menu{ position:absolute;overflow: auto; top:80px;left:0;bottom:50px;width:210px;  background: linear-gradient(160deg , #838ab9 , #f5f5f5); }
+.but_cs_1{   position: absolute; left: 15px; top: 10px; height: 45px; width: 170px; background: linear-gradient(to bottom , #C0C0C0 , #F0F0F0); border-radius: 20px 20px 20px 20px;}
+.but_cs_2{   position: absolute; left: 15px; top: 65px; height: 45px; width: 170px; background: linear-gradient(to bottom , #C0C0C0 , #F0F0F0); border-radius: 20px 20px 20px 20px;}
+.but_cs_3{   position: absolute; left: 15px; top: 120px; height: 45px; width: 170px; background: linear-gradient(to bottom , #C0C0C0 , #F0F0F0); border-radius: 20px 20px 20px 20px;}
+.but_cs_4{   position: absolute; left: 15px; top: 175px; height: 45px; width: 170px; background: linear-gradient(to bottom , #C0C0C0 , #F0F0F0); border-radius: 20px 20px 20px 20px;}
+.but_cs_5{   position: absolute; left: 15px; top: 230px; height: 45px; width: 170px; background: linear-gradient(to bottom , #C0C0C0 , #F0F0F0); border-radius: 20px 20px 20px 20px;}
+.but_cs_6{   position: absolute; left: 15px; top: 285px; height: 45px; width: 170px; background: linear-gradient(to bottom , #C0C0C0 , #F0F0F0); border-radius: 20px 20px 20px 20px;}
+.but_cs_7{   position: absolute; left: 15px; top: 340px; height: 45px; width: 170px; background: linear-gradient(to bottom , #C0C0C0 , #F0F0F0); border-radius: 20px 20px 20px 20px;}
+.but_cs_8{   position: absolute; left: 15px; top: 395px; height: 45px; width: 170px; background: linear-gradient(to bottom , #C0C0C0 , #F0F0F0); border-radius: 20px 20px 20px 20px;}
+/*.but_1,.but_2,.but_3,.but_4,.but_5,.but_6,.but_7,.but_8{    position: absolute;  left: 7px;  top: 7px;  width: 156px;  height: 32px; background: linear-gradient(to bottom , #9d9797 , #454546);border-radius: 20px 20px 20px 20px; box-shadow: 1px 2px 1px 0px #000; color: white; cursor: pointer;}*/
+.left_menu_but{    position: absolute;  left: 7px;  top: 7px;  width: 156px;  height: 32px; background: linear-gradient(to bottom , #9d9797 , #454546);border-radius: 20px 20px 20px 20px; box-shadow: 1px 2px 1px 0px #000; color: white; cursor: pointer;}
+.but_1_name,.but_7_name{   position: absolute; font-size: larger; right: 40px; top: 3px;}
+.but_2_name,.but_6_name{   position: absolute; font-size: larger; right: 32px; top: 3px;}
+.but_3_name,.but_4_name,.but_5_name ,.but_8_name{   position: absolute; font-size: larger; right: 22px; top: 3px;}
+
+/*内容栏*/
+.content{position:absolute;overflow:auto; top:80px; left:210px;right:0;bottom:50px; width: 400px ;}
+.tabT{    text-align: center; font-size: x-large; height: 50px; font-weight: 900;  }
+.inp{background: rgba(0,0,0,0);  border-radius: 8px;  width: 200px;  height: 25px;}
+.sel{  border-radius: 8px;  width: 200px;  height: 30px;  background: rgba(0,0,0,0); }
+.tArea{     width: 200px;  height: 120px; }
+    /*圆形点击按钮*/
+.quite_css{ position: absolute;  left: 150px;  width: 100px;  height: 100px;  background: linear-gradient(to bottom , #C0C0C0 , #F0F0F0);  border-radius: 49px; }
+.quite{   position: absolute;  left: 10px;  top: 10px;  width: 80px; height: 80px; background: linear-gradient(to bottom , #00BFFF , #1E90FF);  border-radius: 49px;  box-shadow: 1px 2px 1px 0px #000;  color: white;  cursor: pointer; }
+.quite_name{  position: absolute;  left: 18px;  top: 28px; font-family: sans-serif; }
+    /*椭圆形点击按钮 */
+.quite_css_1{ height: 50px; }
+.quite_css_2{ position: absolute;  left: 100px;  width: 180px;  height: 50px;  background: linear-gradient(to bottom , #C0C0C0 , #F0F0F0);  border-radius: 49px; }
+.quite_2{   position: absolute;  left: 10px;  top: 10px;  width: 160px; height: 30px; background: linear-gradient(to bottom , #00BFFF , #1E90FF);  border-radius: 49px;  box-shadow: 1px 2px 1px 0px #000;  color: white;  cursor: pointer; }
+.quite_name_2{ position: absolute;  left: 42px;  top: 5px;  font-family: sans-serif; }
+
+
+/*返回结果栏*/
+.responseMessage{ width: 98% ;  height: 98%; }
+
+/*底部栏*/
+.bottom{ position:absolute;left:0;right:0;bottom:0;height:50px;background: linear-gradient(to bottom , #f5f5f5 , #838ab9); color: #0c0303; text-align: center;}
+.botMsg{   position: absolute;  top: 10px; }

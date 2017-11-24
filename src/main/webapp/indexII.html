@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.8.1.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="js/zeroCopy/ZeroClipboard.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="js/yhtApi.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="js/yhtII.js" type="text/javascript" charset="UTF-8"></script>
+    <link type="text/css"  href="css/indexII.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="main">
+        <div class="main_top">
+            <span class="req_name">请求访问的地址 ：</span>  <select class="req_url" onchange="getURL()"></select>
+            <span class="token_name">Token : </span>  <textarea id="token"  class="token_info" onchange="checkToken()"></textarea>
+            <button class="token_action_1" type="button" onclick="checkToken()">检验</button>
+            <button class="token_action_2" type="button" data-clipboard-target="token" onclick="copyToken()">复制</button>
+        </div>
+
+        <div class="left_menu">
+            <div class="but_cs_1">  <div class="left_menu_but" id="but_1" onclick="addUserView()"> <span class="but_1_name"> 添加用户 </span></div></div>
+            <div class="but_cs_2">  <div class="left_menu_but" id="but_2" onclick="getTokenView()"> <span class="but_2_name"> 获取token </span></div></div>
+            <div class="but_cs_3">  <div class="left_menu_but" id="but_3" onclick="modifyUserInfoView()"> <span class="but_3_name"> 修改用户信息 </span></div></div>
+            <div class="but_cs_4">  <div class="left_menu_but" id="but_4" onclick="templateContractView()"> <span class="but_4_name"> 模板创建合同 </span></div></div>
+            <div class="but_cs_5">  <div class="left_menu_but" id="but_5" onclick="fileContractView()"> <span class="but_5_name"> 文件创建合同 </span></div></div>
+            <div class="but_cs_6">  <div class="left_menu_but" id="but_6" onclick="addPartnerView()"> <span class="but_6_name"> 添加参与者 </span></div></div>
+            <div class="but_cs_7">  <div class="left_menu_but" id="but_7" onclick="contractManagerView()"> <span class="but_7_name"> 合同管理 </span></div></div>
+            <div class="but_cs_8">  <div class="left_menu_but" id="but_8" onclick="contractListView()"> <span class="but_8_name"> 合同列表查询 </span></div></div>
+        </div>
+
+        <div class="content"> </div>
+
+        <div class="right_message"><textarea class="responseMessage"> 返回结果：</textarea> </div>
+
+        <div class="bottom"><span class="botMsg">喜迎API测试第二版</span></div>
+    </div>
+</body>
+</html>
