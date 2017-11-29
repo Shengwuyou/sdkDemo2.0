@@ -7,6 +7,7 @@ var password ;
 var templateId;
 var contractId;
 var clip ;
+var type;
 
 var reqUrl = new Array();
 reqUrl[0] =  "https://sdk.yunhetong.com/sdk/";
@@ -91,7 +92,13 @@ function upsetButColor(selectId) {
     $(selectId).css("background","linear-gradient(to bottom , #fb77ba , #3e86f1)");
 
 }
-
+function signType() {
+    if ($('.act_pdf_switch').attr('checked')) {
+        type = "2";
+    }else{
+        type = "";
+    }
+}
 function addUserView() {
     upsetButColor($("#but_1"));
     //先清空
@@ -470,9 +477,9 @@ var autoSignContract=function () {
     contractId = $("*[name='contractId']").val();
     var datas = {
         "contractId" : contractId,
-        "signer":  $("*[name='signer']").val()
+        "signer":  $("*[name='signer']").val(),
+        "type" : type
     };
-
     $.ajax({
         type: 'POST',
         url: HOST+'contract/signContract?token='+token,
@@ -493,8 +500,10 @@ var autoSignContract=function () {
 var invalid=function () {
     contractId = $("*[name='contractId']").val();
     var datas = {
-        "contractId" : contractId
+        "contractId" : contractId,
+        "type" : type
     };
+
     $.ajax({
         type: 'POST',
         url: HOST+'contract/invalid?token='+token,
@@ -545,6 +554,10 @@ var loaclSignContract = function () {
     window.open(HOST + "views/contract_view.html?token="+ token+"&contractId="+contractId);
 };
 var signContract= function(){
+    if ($('.act_pdf_switch').attr('checked')) {
+        window.open(HOST + "download/pdfStream/"+contractId+"/SWY");
+        return;
+    }
     if(HOST == "http://localhost:8080/sdk/"||HOST == "http://192.168.10.56:9999/sdk/"){
         loaclSignContract();
         return;

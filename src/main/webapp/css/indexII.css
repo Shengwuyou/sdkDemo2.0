@@ -11,6 +11,12 @@ body {  margin: 0 1%;  background-color: #f8f8f8;  font-family: "微软雅黑 Li
 .token_info{    position: absolute;  left: 230px;  top: 45px;  width: 540px;  height: 20px;  border: 0px ; background : rgba(0,0,0,0);}
 .token_action_1{    position: absolute;  left: 780px;  top: 45px;   width: 60px;  border-radius: 15px;}
 .token_action_2{    position: absolute;  left: 850px;  top: 45px;   width: 60px;  border-radius: 15px;}
+     /*左右滑动按钮*/
+.act_pdf{    position: relative;  left: 950px;}
+.act_pdf_switch {  width: 50px;  height: 25px;  position: relative;top: 10px;  border: 1px solid #a59292;  background-color: #fdfdfd;  box-shadow: #7d7676 0 0 0 0 inset;  border-radius: 20px;  border-top-left-radius: 20px;  border-top-right-radius: 20px;  border-bottom-left-radius: 20px;  border-bottom-right-radius: 20px;  background-clip: content-box;  display: inline-block;  -webkit-appearance: none;  user-select: none;  outline: none;}
+.act_pdf_switch:before {  content: '';  width: 22px;  height: 22px;  position: absolute;  top: 0px;  left: 0px;  border-radius: 20px;  border-top-left-radius: 20px;  border-top-right-radius: 20px;  border-bottom-left-radius: 20px;  border-bottom-right-radius: 20px;  background-color: #fff;  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);}
+.act_pdf_switch:checked {  border-color: #64bd63;  box-shadow: #64bd63 0 0 0 16px inset;  background-color: #64bd63; }
+.act_pdf_switch:checked:before {  left: 26px; }
 
 /*菜单栏*/
 .left_menu{ position:absolute;overflow: auto; top:80px;left:0;bottom:50px;width:210px;  background: linear-gradient(160deg , #838ab9 , #f5f5f5); }
@@ -36,14 +42,16 @@ body {  margin: 0 1%;  background-color: #f8f8f8;  font-family: "微软雅黑 Li
 .tArea{     width: 200px;  height: 120px; }
     /*圆形点击按钮*/
 .quite_css{ position: absolute;  left: 150px;  width: 100px;  height: 100px;  background: linear-gradient(to bottom , #C0C0C0 , #F0F0F0);  border-radius: 49px; }
-.quite{   position: absolute;  left: 10px;  top: 10px;  width: 80px; height: 80px; background: linear-gradient(to bottom , #00BFFF , #1E90FF);  border-radius: 49px;  box-shadow: 1px 2px 1px 0px #000;  color: white;  cursor: pointer; }
+.quite{   position: absolute;  left: 10px;  top: 10px;  width: 80px; height: 80px; background: linear-gradient(to bottom ,#62caec ,#191e23);  border-radius: 49px;  box-shadow: 1px 2px 1px 0px #000;  color: white;  cursor: pointer; }
+.quite:active{   position: absolute;  left: 10px;  top: 10px;  width: 80px; height: 80px; background: linear-gradient(to bottom ,#ff003b ,#1b161b);  border-radius: 49px;  box-shadow: 1px 2px 1px 0px #000;  color: white;  cursor: pointer; }
+
 .quite_name{  position: absolute;  left: 18px;  top: 28px; font-family: sans-serif; }
     /*椭圆形点击按钮 */
 .quite_css_1{ height: 50px; }
 .quite_css_2{ position: absolute;  left: 100px;  width: 180px;  height: 50px;  background: linear-gradient(to bottom , #C0C0C0 , #F0F0F0);  border-radius: 49px; }
-.quite_2{   position: absolute;  left: 10px;  top: 10px;  width: 160px; height: 30px; background: linear-gradient(to bottom , #00BFFF , #1E90FF);  border-radius: 49px;  box-shadow: 1px 2px 1px 0px #000;  color: white;  cursor: pointer; }
+.quite_2{   position: absolute;  left: 10px;  top: 10px;  width: 160px; height: 30px; background: linear-gradient(to bottom ,#3cc4f1 ,#44586d);  border-radius: 49px;  box-shadow: 1px 2px 1px 0px #000;  color: white;  cursor: pointer; }
+.quite_2:active{   position: absolute;  left: 10px;  top: 10px;  width: 160px; height: 30px; background: linear-gradient(to bottom ,#fb77ba , #3e86f1);  border-radius: 49px;  box-shadow: 1px 2px 1px 0px #000;  color: white;  cursor: pointer; }
 .quite_name_2{ position: absolute;  left: 42px;  top: 5px;  font-family: sans-serif; }
-
 
 /*返回结果栏*/
 .responseMessage{ width: 98% ;  height: 98%; }
