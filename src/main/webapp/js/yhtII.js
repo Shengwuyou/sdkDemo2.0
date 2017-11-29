@@ -318,7 +318,7 @@ function templateContractView() {
 
     initSelect($("*[name='useCer']"),1,0,false,null);
 
-    $("*[name='title']").val("模板Id创建");
+    $("*[name='title']").val("《模板创建"+new Date().getTime()+"》");
     $("*[name='defContractNo']").val(new Date().getTime());
     $("*[name='templateId']").val(templateId);
 }
@@ -372,7 +372,7 @@ function fileContractView() {
 
     initSelect($("*[name='useCer']"),1,0,false,null);
 
-    $("*[name='title']").val("上传文件创建");
+    $("*[name='title']").val("《上传文件创建"+new Date().getTime()+"》");
     $("*[name='defContractNo']").val(new Date().getTime());
 }
 function fileContract() {
@@ -545,7 +545,7 @@ var loaclSignContract = function () {
     window.open(HOST + "views/contract_view.html?token="+ token+"&contractId="+contractId);
 };
 var signContract= function(){
-    if(HOST == "http://localhost:8080/sdk/"){
+    if(HOST == "http://localhost:8080/sdk/"||HOST == "http://192.168.10.56:9999/sdk/"){
         loaclSignContract();
         return;
     }
